@@ -1,0 +1,608 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+}
+
+.site-title img {
+  margin-left: 20px;
+}
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5em;
+      margin-bottom: -30px;
+    }
+
+    nav {
+      position: relative;
+      
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      position: relative;
+      top: 50px;
+    }
+
+    .nav-links li {
+      position: relative;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #7393B3;
+      ont-weight: bold;
+      display: block;
+      padding: 8px 10px;
+      font-size: 20px;
+      font-family: 'DM Sans';
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f7f6f4;
+      min-width: 160px;
+      top: 100%;
+      left: 0;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+      z-index: 1000;
+      border-radius: 5px;
+    }
+
+    .dropdown-content li {
+      padding: 0;
+    }
+
+    .dropdown-content li a {
+      padding: 10px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .cart a {
+      color: #7393B3;
+    }
+
+    .mobile-menu {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        background-color: #fdfdfc;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        display: none;
+        width: 200px;
+        padding: 10px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .dropdown-content {
+        position: relative;
+        box-shadow: none;
+        background-color: transparent;
+        padding-left: 15px;
+      }
+
+      .dropdown-content li a {
+        background-color: transparent;
+      }
+
+      .dropdown.open .dropdown-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+    }
+
+    ain {
+      padding: 20px;
+      text-align: center;
+    }
+
+    1 {
+      padding-top: 20px;
+      margin-bottom: 20px;
+      color: #0c4d77;
+      font-family: 'DM Sans'
+    }
+   h2 {
+      color: #0c4d77;
+      text-align: center;
+      font-family: 'DM Sans'
+    }
+
+    .book-list {
+      padding-top: 15px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .book {
+      background: #fff;
+      padding: 15px;
+      order-radius: 8px;
+      width: 300px;
+      text-align: center;
+      ox-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .book img {
+      max-width: 100%;
+      order-radius: 8px;
+    }
+
+    .book button {
+      background-color: #7393B3;
+      border: none;
+      padding: 10px;
+      margin-top: 10px;
+      color: black;
+      order-radius: 5px;
+      cursor: pointer;
+    }
+
+    .book button:hover {
+      background-color: #7393B3;
+    }
+
+    .image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.image-wrapper img {
+  width: 100%;
+  order-radius: 10px;
+  display: block;
+}
+
+.hover-btn {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: #fff;
+  padding: 10px 15px;
+  order-radius: 8px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.image-wrapper:hover .hover-btn {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+
+     .team-section {
+      margin-top: 60px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .team-member {
+      display: flex;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .team-info {
+      text-align: left;
+    }
+
+    .team-info h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: #0c4d77;
+    }
+
+    .team-info p {
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .team-member {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .team-info {
+        text-align: center;
+      }
+    }
+   
+    .carousel {
+  width: 300%;
+
+  max-width: 700px;
+  margin: 0 auto 40px;
+  overflow: hidden;
+  border-radius: 10px;
+  ox-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: slide 12s infinite;
+}
+
+.carousel-image {
+  width: 100%;
+  margin: auto;
+  flex-shrink: 0;
+  display: none;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(0); }
+  36%  { transform: translateX(-100%); }
+  66%  { transform: translateX(-100%); }
+  69%  { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
+
+
+main {
+      padding: 70px 20px;
+      background-color: transparent;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #0c4d77;
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+footer {
+      background-color: #f5eee2;
+      background-color: #ebebe3;
+      padding: 30px;
+      text-align: center;
+      color: #333;
+      bottom: 0;
+    }
+
+    footer a {
+      color: #7393B3;
+      font-size: 2em;
+      margin: 0 10px;
+    }
+
+    .press-info {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .press-info h2 {
+      color: #7393B3;
+      margin-top: 30px;
+    }
+
+    .press-info a {
+      color: #0c4d77;
+      text-decoration: underline;
+    }
+.nav-links.show {
+  display: flex;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+.nav-links.show {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+/* Newsletter-Popup */
+#newsletter-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#newsletter-popup.popup-hidden {
+  display: none;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.popup-content h2 {
+  color: #0c4d77;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  margin-bottom: 20px;
+}
+
+.popup-content input {
+  padding: 10px;
+  width: 70%;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.popup-content button {
+  padding: 10px;
+  background-color: #7393B3;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.close-popup {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+
+.newsletter-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin: 10px auto;
+}
+
+.newsletter-box h2 {
+  color: #0c4d77;
+  margin-bottom: 10px;
+}
+
+.newsletter-box p {
+  margin-bottom: 20px;
+}
+
+.newsletter-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter-box input[type="email"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.newsletter-box button {
+  padding: 10px;
+  background-color: #7393B3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-box button:hover {
+  background-color: #527a9b;
+}
+
+
+.verlagsvorschau {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.verlagsvorschau h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.vorschau-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.orschau-item {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  ox-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.vorschau-item:hover {
+  transform: translateY(-5px);
+}
+
+.vorschau-item img {
+  width: 100%;
+  height: auto;
+  order-radius: 8px;
+}
+
+.vorschau-item h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.vorschau-item p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Das muss im Hauptdokument stehen, nicht in newsletter.html */
+.newsletter-section {
+  background-color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+  margin-top: 19px;
+}
+
+.newsletter-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.newsletter-section p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.newsletter-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.newsletter-section input[type="email"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.newsletter-section button {
+  padding: 10px 20px;
+  background-color: #ff7f50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-section button:hover {
+  background-color: #ff5722;
+}
+
+/* Standardmäßig ausblenden */
+.newsletter-section .close-popup {
+  display: none;
+}
+
+/* Nur im Popup sichtbar machen */
+#newsletter-popup .close-popup {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
