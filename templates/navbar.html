@@ -1,0 +1,24 @@
+<!-- navbar.html -->
+<header>
+  <div class="site-title" style="float: left; font-size: 36px; color: #7393B3; font-weight: bolder; font-family: Montserrat">
+    <img src="20250519_0944_Logo für Kinderbuchverlag_simple_compose_01jvkqyhcnfbca2467hrfzect7.png" width="120" height="160" style="vertical-align: middle; margin-left: 20px;"> 
+  </div>
+
+  <nav id="navbar">
+    <ul class="nav-links" id="nav-links">
+      <!--<li><a href="index.html">Bücher</a></li>-->
+      <li class="dropdown" onclick="toggleDropdown(this)">
+        <a href="#">Über uns <i class="fas fa-caret-down"></i></a>
+        <ul class="dropdown-content">
+          <li><a href="Team.html">AutorInnen</a></li>
+          <li><a href="Team.html">Übersetzerinnen</a></li>
+          <li><a href="vision.html">Unsere Vision</a></li>
+          <li><a href="presse.html">Presse</a></li>
+        </ul>
+      </li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+      <li class="cart"><a href="checkout.html">🛒 <span id="cart-count">0</span></a></li>
+    </ul>
+    <div class="mobile-menu" onclick="toggleMenu()">☰</div>
+  </nav>
+</header>
